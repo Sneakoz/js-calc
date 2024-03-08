@@ -1,7 +1,7 @@
 // Create the number and operator variables
 let firstNum = '';
 let secondNum = '';
-let operator = '';
+let operator;
 let operatorPressed = false;
 
 // Import the buttons
@@ -31,7 +31,7 @@ numButtons.forEach(button => {
 // Create event listeners for operator buttons
 opButtons.forEach(button => {
     button.addEventListener('click', ()=> {
-        operator = opButtons.textContent;
+        operator = button.textContent;
         operatorPressed = true;
         console.log(operator);
     });
