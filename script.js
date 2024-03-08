@@ -32,8 +32,7 @@ opButtons.forEach(button => {
         if (!operatorUsed) {
             operator = button.textContent;
             operatorUsed = true;
-            console.log(operator);
-        }
+        };
     });
 });
 
@@ -43,7 +42,7 @@ equalBtn.addEventListener('click', () => {
     firstNum = result;
     secondNum = '';
     operatorUsed = false;
-})
+});
 
 // Create event listner for the clear button
 // clearBtn.addEventListener('click' () => {
