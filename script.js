@@ -4,6 +4,14 @@ let secondNum;
 let operator;
 
 // Create event listeners for the buttons
+const numButtons = document.querySelectorAll('.number');
+
+numButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        let text = button.textContent;
+        console.log(text);
+    })
+})
 
 
 // Create the operate function
