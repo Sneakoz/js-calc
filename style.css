@@ -26,4 +26,26 @@ button {
     font-size: 100px;
     text-align: end;
     padding-right: 30px;
+    color: fuchsia;
+}
+
+.btn {
+    color: white;
+}
+
+.operator {
+    background-color: orange;
+}
+
+.number {
+    background-color: aqua;
+}
+
+.equal {
+    background-color: azure;
+    color: black;
+}
+
+.clear {
+    background-color: red;
 }
