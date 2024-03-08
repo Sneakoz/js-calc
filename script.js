@@ -26,13 +26,13 @@ numButtons.forEach(button => {
 
 // Create event listeners for operator buttons
 opButtons.forEach(button => {
-    if (!operatorPressed) {
-        button.addEventListener('click', ()=> {
+    button.addEventListener('click', ()=> {
+        if (!operatorPressed) {
             operator = button.textContent;
             operatorPressed = true;
             console.log(operator);
-        });
-    };
+        }
+    });
 });
 
 // Create the operate function
