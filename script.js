@@ -2,7 +2,8 @@
 let firstNum = '';
 let secondNum = '';
 let operator;
-let operatorPressed = false;
+let operatorUsed = false;
+let result;
 
 // Import the buttons and display
 const numButtons = document.querySelectorAll('.number');
@@ -15,7 +16,7 @@ const display = document.querySelector('.display');
 numButtons.forEach(button => {
     button.addEventListener('click', () => {
         let text = button.textContent;
-        if (operatorPressed == false) {
+        if (operatorUsed == false) {
             firstNum += text;
             display.textContent = firstNum;
         } else {
@@ -28,18 +29,26 @@ numButtons.forEach(button => {
 // Create event listeners for operator buttons
 opButtons.forEach(button => {
     button.addEventListener('click', ()=> {
-        if (!operatorPressed) {
+        if (!operatorUsed) {
             operator = button.textContent;
-            operatorPressed = true;
+            operatorUsed = true;
             console.log(operator);
         }
     });
 });
 
-// Create event listner for the equal button and add functionality
-clearBtn.addEventListener('click', () => {
+// Create event listner for the equal button
+equalBtn.addEventListener('click', () => {
     operate(firstNum, secondNum, operator);
+    firstNum = result;
+    secondNum = '';
+    operatorUsed = false;
 })
+
+// Create event listner for the clear button
+// clearBtn.addEventListener('click' () => {
+
+// })
 
 // Create the operate function
 function operate(first, second, op) {
@@ -52,21 +61,22 @@ function operate(first, second, op) {
     } else {
         divide(first, second);
     };
+    display.textContent = result;
 };
 
 // Create the operator functions
 function add(a, b) {
-    display.textContent = a + b;
+    result = Number(a) +  Number(b);
 };
 
 function subtract(a, b) {
-    display.textContent = a - b;
+    result = a - b;
 };
 
 function multiply(a, b) {
-    display.textContent = a * b;
+    result = a * b;
 };
 
 function divide(a , b) {
-    display.textContent = a / b;
+    result = a / b;
 };
