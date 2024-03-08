@@ -18,7 +18,6 @@ const clearBtn = document.querySelector('#clear');
 numButtons.forEach(button => {
     button.addEventListener('click', () => {
         let text = button.textContent;
-        console.log(text);
         if (operatorPressed == false) {
             firstNum += text;
             console.log(firstNum);
