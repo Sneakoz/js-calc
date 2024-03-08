@@ -45,9 +45,14 @@ equalBtn.addEventListener('click', () => {
 });
 
 // Create event listner for the clear button
-// clearBtn.addEventListener('click' () => {
-
-// })
+clearBtn.addEventListener('click', () => {
+    display.textContent = 0;
+    firstNum = '';
+    secondNum = '';
+    operator = '';
+    operatorUsed = false;
+    result = '';
+});
 
 // Create the operate function
 function operate(first, second, op) {
