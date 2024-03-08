@@ -7,10 +7,6 @@ let operatorPressed = false;
 // Import the buttons
 const numButtons = document.querySelectorAll('.number');
 const opButtons = document.querySelectorAll('.operator');
-const sumBtn = document.querySelector('#sum');
-const subtractBtn = document.querySelector('#subtract');
-const multiplyBtn = document.querySelector('#multiply');
-const divideBtn = document.querySelector('#divide');
 const equalBtn = document.querySelector('#equal');
 const clearBtn = document.querySelector('#clear');
 
@@ -30,17 +26,14 @@ numButtons.forEach(button => {
 
 // Create event listeners for operator buttons
 opButtons.forEach(button => {
-    button.addEventListener('click', ()=> {
-        operator = button.textContent;
-        operatorPressed = true;
-        console.log(operator);
-    });
+    if (!operatorPressed) {
+        button.addEventListener('click', ()=> {
+            operator = button.textContent;
+            operatorPressed = true;
+            console.log(operator);
+        });
+    };
 });
-
-// subtractBtn.addEventListener('click', () => );
-// subtractBtn.addEventListener('click', () => );
-// subtractBtn.addEventListener('click', () => );
-// subtractBtn.addEventListener('click', () => );
 
 // Create the operate function
 function operate(first, second, op) {
