@@ -3,7 +3,8 @@ let firstNum;
 let secondNum;
 let operator;
 
-// 
+// Create event listeners for the buttons
+
 
 // Create the operate function
 function operate(first, second, op) {
