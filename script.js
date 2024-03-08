@@ -17,10 +17,10 @@ numButtons.forEach(button => {
         let text = button.textContent;
         if (operatorPressed == false) {
             firstNum += text;
-            console.log(firstNum);
+            display.textContent = firstNum;
         } else {
             secondNum += text;
-            console.log(secondNum);
+            display.textContent = secondNum;
         }
     });
 });
