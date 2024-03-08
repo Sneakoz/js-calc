@@ -4,11 +4,12 @@ let secondNum = '';
 let operator;
 let operatorPressed = false;
 
-// Import the buttons
+// Import the buttons and display
 const numButtons = document.querySelectorAll('.number');
 const opButtons = document.querySelectorAll('.operator');
 const equalBtn = document.querySelector('#equal');
 const clearBtn = document.querySelector('#clear');
+const display = document.querySelector('.display');
 
 // Create event listeners for the numButtons
 numButtons.forEach(button => {
