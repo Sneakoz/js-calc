@@ -36,24 +36,37 @@ opButtons.forEach(button => {
     });
 });
 
+// Create event listner for the equal button and add functionality
+clearBtn.addEventListener('click', () => {
+    operate(firstNum, secondNum, operator);
+})
+
 // Create the operate function
 function operate(first, second, op) {
-    return add(first, second);
+    if(op == '+') {
+        add(first, second);
+    } else if(op == '-') {
+        subtract(first, second);
+    } else if(op == 'x') {
+        multiply(first, second);
+    } else {
+        divide(first, second);
+    };
 };
 
 // Create the operator functions
 function add(a, b) {
-    return a + b;
+    display.textContent = a + b;
 };
 
 function subtract(a, b) {
-    return a - b;
+    display.textContent = a - b;
 };
 
 function multiply(a, b) {
-    return a * b;
+    display.textContent = a * b;
 };
 
 function divide(a , b) {
-    return a / b;
+    display.textContent = a / b;
 };
