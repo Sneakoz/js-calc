@@ -25,4 +25,5 @@ button {
 p {
     font-size: 100px;
     text-align: end;
+    padding-right: 30px;
 }
